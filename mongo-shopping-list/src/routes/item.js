@@ -12,7 +12,6 @@ function handleGet(req, res) {
 
 function handlePost(req, res) {
     Item.save(req.body.name, function(item) {
-        console.log("handlePost - " + item)
         res.status(201).json(item);
     }, function(err) {
         res. status(400).json(err);

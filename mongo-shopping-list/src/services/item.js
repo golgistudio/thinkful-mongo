@@ -21,7 +21,6 @@ exports.list = function(callback, errback) {
 };
 
 exports.update = function(name, id, callback, errback) {
-    console.log("service update - " + id + ", name : " + name)
     Item.findById(id, function(err, doc) {
         if (err) {
             errback(err);
